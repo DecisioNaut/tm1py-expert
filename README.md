@@ -197,6 +197,7 @@ Created following the [Agent Skills Specification](https://agentskills.io/specif
 
 ## Acknowledgments
 
+- [skill-smith](https://github.com/copilot-skills/skills/blob/main/skill-smith) for skill structure and validation guidance
 - [Cubewise](https://www.cubewise.com/) for developing and maintaining TM1py
 - The TM1py community for contributions and examples
 - IBM for Planning Analytics / TM1
