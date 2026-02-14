@@ -35,7 +35,7 @@ The skill activates when working with:
 ### Prerequisites
 
 - Python 3.7 or higher
-- TM1py package installed (`pip install TM1py`)
+- TM1py package installed (`pip install tm1py`)
 - Access to TM1 or Planning Analytics instance
 - Appropriate TM1 user credentials
 
@@ -52,6 +52,7 @@ tm1py-expert/
     ├── CONNECTION_GUIDE.md       # Connection patterns for all environments
     ├── DATA_OPERATIONS.md        # Reading/writing data guide
     ├── METADATA_MANAGEMENT.md    # CRUD for all TM1 objects
+    ├── METADATA_MANAGEMENT_ADVANCED.md # Advanced metadata patterns
     ├── PERFORMANCE.md            # Optimization techniques
     └── EXAMPLES.md               # Real-world code samples
 ```
@@ -68,6 +69,7 @@ tm1py-expert/
 - **[Connection Guide](references/CONNECTION_GUIDE.md)**: Connection patterns for TM1 11, TM1 12, PAaaS, Cloud Pak for Data
 - **[Data Operations](references/DATA_OPERATIONS.md)**: Comprehensive guide to reading and writing data
 - **[Metadata Management](references/METADATA_MANAGEMENT.md)**: CRUD operations for dimensions, cubes, processes, etc.
+- **[Metadata Management Advanced](references/METADATA_MANAGEMENT_ADVANCED.md)**: Advanced patterns and workflows
 - **[Performance Guide](references/PERFORMANCE.md)**: Performance optimization and benchmarking
 - **[Examples](references/EXAMPLES.md)**: Real-world code samples and use cases
 
@@ -191,7 +193,7 @@ See [CHANGELOG.md](CHANGELOG.md) for version history.
 
 ## Author
 
-Created following the [Agent Skills Specification](https://github.com/copilot-skills/agent-skills).
+Created following the [Agent Skills Specification](https://agentskills.io/specification).
 
 ## Acknowledgments
 

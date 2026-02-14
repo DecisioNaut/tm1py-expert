@@ -54,6 +54,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - CI/CD pipeline patterns
 - Unit testing examples for TM1py scripts
 
+### Changed
+- Split metadata management reference into base and advanced guides
+- Fixed documentation typos and links
+
 ---
 
-[1.0.0]: https://github.com/yourusername/tm1py-expert/releases/tag/v1.0.0
+[1.0.0]: https://github.com/DecisioNaut/tm1py-expert/releases/tag/v1.0.0

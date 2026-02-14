@@ -292,7 +292,7 @@ tm1.elements.add_edge(
 )
 ```
 
-See `references/METADATA_MANAGEMENT.md` for complete CRUD operations.
+See `references/METADATA_MANAGEMENT.md` for CRUD operations and `references/METADATA_MANAGEMENT_ADVANCED.md` for advanced patterns.
 
 ### Task 5: Execute TI Processes
 
@@ -447,6 +447,7 @@ For detailed information, consult these reference documents:
 - **CONNECTION_GUIDE.md**: Connection patterns for all TM1 environments (on-prem, cloud, TM1 12)
 - **DATA_OPERATIONS.md**: Deep dive into reading and writing data with all options and optimizations
 - **METADATA_MANAGEMENT.md**: Comprehensive guide to CRUD operations for all TM1 objects
+- **METADATA_MANAGEMENT_ADVANCED.md**: Advanced metadata patterns and reusable workflows
 - **PERFORMANCE.md**: Performance optimization techniques, async operations, and benchmarking
 - **EXAMPLES.md**: Extended code samples and real-world use cases
 

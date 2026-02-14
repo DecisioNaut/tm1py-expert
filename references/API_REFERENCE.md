@@ -1,6 +1,6 @@
 # TM1py API Reference
 
-Complete reference for all T M1py services and their methods.
+Complete reference for all TM1py services and their methods.
 
 ## Service Overview
 

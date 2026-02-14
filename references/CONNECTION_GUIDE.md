@@ -63,9 +63,7 @@ with TM1Service(**connection_params) as tm1:
     print(f"Connected as: {tm1.whoami.name}")
 ```
 
-### CAM
-
- with SSO
+### CAM with SSO
 
 ```python
 # Windows Integrated Authentication
