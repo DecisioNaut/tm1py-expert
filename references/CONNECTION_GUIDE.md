@@ -256,13 +256,54 @@ with TM1Service(**connection_params) as tm1:
     print("Connected to Cloud Pak for Data")
 ```
 
-### Getting OAuth Credentials
+### Obtaining OAuth Credentials
 
 1. Access Cloud Pak for Data console
 2. Navigate to Administration > Access control > Service IDs
 3. Create service ID or use existing
 4. Generate client ID and secret
 5. Note the instance and database names from your TM1 service
+
+---
+
+## TM1 12 Advanced Features (TM1py 2.1+)
+
+### Hybrid Sync/Async Mode
+
+For scenarios mixing fast and slow operations:
+
+```python
+connection_params = {
+    'base_url': 'https://pa12.company.com/api/<InstanceId>/v0/tm1/<DatabaseName>/',
+    'user': 'admin',
+    'password': 'apple',
+    'ssl': True,
+    'verify': True,
+    'async_requests_mode': 'hybrid'  # Best of both worlds
+}
+
+with TM1Service(**connection_params) as tm1:
+    # Quick reads use sync, long operations use async
+    df = tm1.cells.execute_mdx_dataframe(query)
+```
+
+### Auto-Reconnect on Network Issues
+
+```python
+connection_params = {
+    'base_url': 'https://pa12.company.com/api/<InstanceId>/v0/tm1/<DatabaseName>/',
+    'user': 'admin',
+    'password': 'apple',
+    'ssl': True,
+    'verify': True,
+    're_connect_on_remote_disconnect': True,  # Auto-reconnect
+    'retry_on_disconnect': True  # Retry operations
+}
+
+with TM1Service(**connection_params) as tm1:
+    # Automatic resilience to network breaks
+    pass
+```
 
 ---
 

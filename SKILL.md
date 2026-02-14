@@ -30,7 +30,11 @@ Activate this skill when:
 - TM1py package: `pip install tm1py` or `pip install "tm1py[pandas]"` (recommended)
 - Access to a TM1/Planning Analytics server (v11 or higher)
 - Valid TM1 credentials (username and password)
-
+#### Recommended (TM1py 2.1+)
+- TM1py 2.1 or higher for advanced features:
+  - Auto-reconnect on network failures
+  - Hybrid sync/async request modes
+  - Built-in retry logic for resilience
 ### Optional
 - pandas library (for DataFrame operations)
 - networkx library (for hierarchy analysis)

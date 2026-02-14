@@ -200,6 +200,48 @@ tm1.cells.write(
 
 ---
 
+## Connection Resilience (TM1py 2.1+)
+
+### Auto-Reconnect on Disconnect
+
+TM1py 2.1+ includes built-in resilience:
+
+```python
+connection_params = {
+    'address': 'localhost',
+    'port': 8001,
+    'user': 'admin',
+    'password': 'apple',
+    'ssl': True,
+    're_connect_on_remote_disconnect': True,  # Auto-reconnect on network issues
+    'retry_on_disconnect': True  # Retry failed operations
+}
+
+with TM1Service(**connection_params) as tm1:
+    # Operations automatically retry on connection loss
+    pass
+```
+
+### Hybrid Sync/Async Mode
+
+For better responsiveness in mixed workloads:
+
+```python
+connection_params = {
+    'address': 'localhost',
+    'port': 8001,
+    'user': 'admin',
+    'password': 'apple',
+    'ssl': True,
+    'async_requests_mode': 'hybrid'  # Use hybrid mode for best performance
+}
+
+with TM1Service(**connection_params) as tm1:
+    df = tm1.cells.execute_mdx_dataframe(query)
+```
+
+---
+
 ## Metadata Operations
 
 ### Bulk Element Creation

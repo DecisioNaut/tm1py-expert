@@ -4,6 +4,99 @@ Advanced patterns and workflows for TM1 metadata management using TM1py.
 
 ---
 
+## Cubes
+
+### Create Cube
+
+```python
+from TM1py import Cube
+
+# Simple cube
+cube = Cube(
+    name='Sales',
+    dimensions=['Product', 'Period', 'Version', 'Measure']
+)
+tm1.cubes.create(cube)
+
+# With rules
+rules = """
+# Calculate Profit
+['Profit'] = ['Revenue'] - ['Cost'];
+
+# Spread to children
+FEEDERS;
+['Revenue'] => ['Profit'];
+['Cost'] => ['Profit'];
+"""
+
+cube = Cube(
+    name='Sales',
+    dimensions=['Product', 'Period', 'Version', 'Measure'],
+    rules=rules
+)
+tm1.cubes.create(cube)
+```
+
+### Read Cube
+
+```python
+# Get cube object
+cube = tm1.cubes.get(cube_name='Sales')
+
+# Get cube dimension names
+dimensions = tm1.cubes.get_dimension_names(cube_name='Sales')
+
+# Get all cube names
+all_cubes = tm1.cubes.get_all_names()
+
+# Get control cubes only
+control_cubes = tm1.cubes.get_all_names(skip_control_cubes=True)
+
+# Check if exists
+exists = tm1.cubes.exists(cube_name='Sales')
+
+# Get cube properties
+rules = tm1.cubes.get_rules(cube_name='Sales')
+```
+
+### Update Cube
+
+```python
+# Get cube
+cube = tm1.cubes.get('Sales')
+
+# Update rules
+new_rules = """
+# Updated calculation
+['Profit'] = ['Revenue'] * 0.2;
+
+FEEDERS;
+['Revenue'] => ['Profit'];
+"""
+
+tm1.cubes.update_rules(cube_name='Sales', rules=new_rules)
+
+# Or update entire cube
+cube.rules = new_rules
+tm1.cubes.update(cube)
+```
+
+### Delete Cube
+
+```python
+tm1.cubes.delete(cube_name='Sales')
+```
+
+### Check Feeders
+
+```python
+# Check if feeders are valid
+trace = tm1.cubes.check_feeders(cube_name='Sales')
+print(trace)
+```
+
+---
+
 ## Common Patterns
 
 ### Complete Dimension Setup
