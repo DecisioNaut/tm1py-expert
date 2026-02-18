@@ -2,6 +2,18 @@
 
 Comprehensive guide to CRUD operations for all TM1 metadata objects.
 
+## Contents
+- [Dimensions](#dimensions)
+- [Hierarchies](#hierarchies)
+- [Elements](#elements)
+- [Element Attributes](#element-attributes)
+- [Edges](#edges-parent-child-relationships)
+- [Processes (TI)](#processes-ti)
+- [Chores](#chores)
+- [Views](#views)
+- [Subsets](#subsets)
+- [Sandboxes](#sandboxes)
+
 ---
 
 ## Dimensions

@@ -12,18 +12,34 @@ The `tm1py-expert` skill provides expert-level assistance for working with [TM1p
 - **Performance Optimization**: Best practices for high-performance operations
 - **Real-World Examples**: Production-ready code samples and patterns
 
-## Quick Start
+## Installation as Agent Skill
 
-### Installation
+### Option 1: Copy to Skills Directory (Recommended)
 
-1. Place this skill directory in your agent skills folder:
-   ```
-   ~/.copilot/skills/tm1py-expert/
+For use with Claude/GitHub Copilot (via agent skills):
+
+1. Copy the **`tm1py-expert` subfolder** (not the root) to your agent skills directory:
+   ```bash
+   # macOS/Linux
+   mkdir -p ~/.copilot/skills/
+   cp -r tm1py-expert/tm1py-expert ~/.copilot/skills/tm1py-expert
+   
+   # Or create a symbolic link for development
+   ln -s /path/to/tm1py-expert/tm1py-expert ~/.copilot/skills/tm1py-expert
    ```
 
 2. The skill will be automatically loaded when you mention TM1py topics in your conversations.
 
-### When to Use
+### Option 2: Reference Directly
+
+If hosting in a repository, configure your agent to load from:
+```
+<repository-root>/tm1py-expert/tm1py-expert/
+```
+
+The skill structure complies with the [Agent Skills Specification](https://agentskills.io/specification).
+
+## When to Use
 
 The skill activates when working with:
 - TM1py package development
@@ -32,46 +48,49 @@ The skill activates when working with:
 - TM1 REST API interactions via Python
 - Planning Analytics administration tasks
 
-### Prerequisites
+## Prerequisites
 
 - Python 3.7 or higher
 - TM1py package installed (`pip install tm1py`)
-- Access to TM1 or Planning Analytics instance
+- Access to TM1 or Planning Analytics instance (v11 or higher)
 - Appropriate TM1 user credentials
 
-## Structure
+## Repository Structure
 
 ```
-tm1py-expert/
-├── SKILL.md              # Core skill instructions (< 500 lines)
-├── README.md             # This file
-├── LICENSE               # MIT License
-├── CHANGELOG.md          # Version history
-└── references/           # Detailed reference documentation
-    ├── API_REFERENCE.md          # Complete API documentation
-    ├── CONNECTION_GUIDE.md       # Connection patterns for all environments
-    ├── DATA_OPERATIONS.md        # Reading/writing data guide
-    ├── METADATA_MANAGEMENT.md    # CRUD for all TM1 objects
-    ├── METADATA_MANAGEMENT_ADVANCED.md # Advanced metadata patterns
-    ├── PERFORMANCE.md            # Optimization techniques
-    └── EXAMPLES.md               # Real-world code samples
+tm1py-expert/ (repository root)
+├── README.md                         # This file
+├── LICENSE                           # MIT License
+├── CHANGELOG.md                      # Version history
+└── tm1py-expert/ (agent skill folder)
+    ├── SKILL.md                      # Core skill instructions
+    └── references/                   # Detailed reference documentation
+        ├── API_REFERENCE.md          # Complete API documentation
+        ├── CONNECTION_GUIDE.md       # Connection patterns for all environments
+        ├── DATA_OPERATIONS.md        # Reading/writing data guide
+        ├── METADATA_MANAGEMENT.md    # CRUD for all TM1 objects
+        ├── METADATA_MANAGEMENT_ADVANCED.md # Advanced metadata patterns
+        ├── PERFORMANCE.md            # Optimization techniques
+        └── EXAMPLES.md               # Real-world code samples
 ```
+
+**Note:** Only the contents of `tm1py-expert/tm1py-expert/` folder should be installed as an agent skill.
 
 ## Documentation
 
 ### Core Documentation
 
-- **[SKILL.md](SKILL.md)**: Start here for step-by-step guidance on common tasks
+- **[SKILL.md](tm1py-expert/SKILL.md)**: Start here for step-by-step guidance on common tasks
 
 ### Reference Guides
 
-- **[API Reference](references/API_REFERENCE.md)**: Complete documentation of all TM1py services and methods
-- **[Connection Guide](references/CONNECTION_GUIDE.md)**: Connection patterns for TM1 11, TM1 12, PAaaS, Cloud Pak for Data
-- **[Data Operations](references/DATA_OPERATIONS.md)**: Comprehensive guide to reading and writing data
-- **[Metadata Management](references/METADATA_MANAGEMENT.md)**: CRUD operations for dimensions, cubes, processes, etc.
-- **[Metadata Management Advanced](references/METADATA_MANAGEMENT_ADVANCED.md)**: Advanced patterns and workflows
-- **[Performance Guide](references/PERFORMANCE.md)**: Performance optimization and benchmarking
-- **[Examples](references/EXAMPLES.md)**: Real-world code samples and use cases
+- **[API Reference](tm1py-expert/references/API_REFERENCE.md)**: Complete documentation of all TM1py services and methods
+- **[Connection Guide](tm1py-expert/references/CONNECTION_GUIDE.md)**: Connection patterns for TM1 11, TM1 12, PAaaS, Cloud Pak for Data
+- **[Data Operations](tm1py-expert/references/DATA_OPERATIONS.md)**: Comprehensive guide to reading and writing data
+- **[Metadata Management](tm1py-expert/references/METADATA_MANAGEMENT.md)**: CRUD operations for dimensions, cubes, processes, etc.
+- **[Metadata Management Advanced](tm1py-expert/references/METADATA_MANAGEMENT_ADVANCED.md)**: Advanced patterns and workflows
+- **[Performance Guide](tm1py-expert/references/PERFORMANCE.md)**: Performance optimization and benchmarking
+- **[Examples](tm1py-expert/references/EXAMPLES.md)**: Real-world code samples and use cases
 
 ## Features
 
@@ -158,7 +177,7 @@ with TM1Service(**config) as tm1:
     )
 ```
 
-See [EXAMPLES.md](references/EXAMPLES.md) for more comprehensive examples.
+See [EXAMPLES.md](tm1py-expert/references/EXAMPLES.md) for more comprehensive examples.
 
 ## Resources
 
@@ -187,7 +206,7 @@ This skill is licensed under the MIT License. See [LICENSE](LICENSE) for details
 
 ## Version
 
-Current version: 1.0.0
+Current version: 1.1.0
 
 See [CHANGELOG.md](CHANGELOG.md) for version history.
 
@@ -204,4 +223,4 @@ Created following the [Agent Skills Specification](https://agentskills.io/specif
 
 ---
 
-For detailed guidance, start with [SKILL.md](SKILL.md).
+For detailed guidance, start with [SKILL.md](tm1py-expert/SKILL.md).

@@ -5,6 +5,45 @@ All notable changes to the tm1py-expert skill will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.0] - 2026-02-18
+
+### Changed
+- **Reorganized skill structure** to comply with Agent Skills Specification:
+  - Moved SKILL.md and references/ into tm1py-expert/ subfolder
+  - Repository now clearly separates skill manifest from project documentation
+  - Updated all internal documentation links to reflect new structure
+- **Improved reference documentation** for better context efficiency:
+  - Added comprehensive Table of Contents to all large reference files (100+ lines):
+    - API_REFERENCE.md, CONNECTION_GUIDE.md, DATA_OPERATIONS.md
+    - EXAMPLES.md, METADATA_MANAGEMENT.md, PERFORMANCE.md
+  - This enables Claude to scan file structure without loading full content
+- **Simplified SKILL.md frontmatter**:
+  - Removed non-essential metadata section (version, author)
+  - Kept only core fields: name, description, license, compatibility
+  - Better alignment with skill-creator recommendations
+- **Removed redundant documentation**:
+  - Eliminated duplicate "When to Use This Skill" section from SKILL.md body
+  - This information already exists in frontmatter (loaded during triggering)
+- **Enhanced cross-references**:
+  - Updated all reference links from backtick format to markdown links
+  - Added anchor links to specific sections in reference files
+  - Improved reference discovery with better descriptions in SKILL.md
+
+### Updated
+- README.md with clear installation instructions for agent skills:
+  - Added installation guide with copy and symlink options
+  - Updated all documentation links to point to new tm1py-expert/ subfolder
+  - Added "Repository Structure" section explaining installation requirements
+  - Clarified that only tm1py-expert/tm1py-expert/ should be installed as skill
+
+### Technical Details
+- Progressive disclosure design implemented:
+  - Metadata (name + description) ~100 words
+  - SKILL.md body <500 lines
+  - References organized for selective loading
+- All reference files include navigation TOCs for efficient scanning
+- Improved markdown link formatting throughout
+
 ## [1.0.0] - 2024-01-13
 
 ### Added
@@ -54,10 +93,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - CI/CD pipeline patterns
 - Unit testing examples for TM1py scripts
 
-### Changed
-- Split metadata management reference into base and advanced guides
-- Fixed documentation typos and links
-
 ---
 
+[1.1.0]: https://github.com/DecisioNaut/tm1py-expert/releases/tag/v1.1.0
 [1.0.0]: https://github.com/DecisioNaut/tm1py-expert/releases/tag/v1.0.0

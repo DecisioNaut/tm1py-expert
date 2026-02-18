@@ -2,6 +2,37 @@
 
 Complete guide to connecting TM1py to different TM1/Planning Analytics environments.
 
+## Contents
+- [Connection Overview](#connection-overview)
+  - [Basic Pattern](#basic-pattern)
+- [TM1 11 On-Premise](#tm1-11-on-premise)
+  - [Standard Connection](#standard-connection)
+  - [LDAP/CAM Authentication](#ldapcam-authentication)
+  - [CAM with SSO](#cam-with-sso)
+  - [Connection Pool Configuration](#connection-pool-configuration)
+- [TM1 11 IBM Cloud](#tm1-11-ibm-cloud)
+  - [Standard IBM Cloud Connection](#standard-ibm-cloud-connection)
+  - [Important IBM Cloud Settings](#important-ibm-cloud-settings)
+  - [Example with All Options](#example-with-all-options)
+- [TM1 12 PAaaS](#tm1-12-paaS-planning-analytics-as-a-service)
+  - [API Key Authentication](#api-key-authentication)
+  - [URL Structure](#url-structure)
+  - [Obtaining API Keys](#obtaining-api-keys)
+- [TM1 12 On-Premise](#tm1-12-on-premise)
+  - [Standard TM1 12 Connection](#standard-tm1-12-connection)
+  - [Access Token Authentication](#access-token-authentication)
+- [TM1 12 Cloud Pak for Data](#tm1-12-cloud-pak-for-data)
+  - [OAuth2 Client Credentials Flow](#oauth2-client-credentials-flow)
+  - [Obtaining OAuth Credentials](#obtaining-oauth-credentials)
+- [TM1 12 Advanced Features](#tm1-12-advanced-features-tm1py-21)
+  - [Hybrid Sync/Async Mode](#hybrid-syncasync-mode)
+  - [Auto-Reconnect on Network Issues](#auto-reconnect-on-network-issues)
+- [Connection Best Practices](#connection-best-practices)
+- [Connection Parameters Reference](#connection-parameters-reference)
+- [Troubleshooting Connection Issues](#troubleshooting-connection-issues)
+- [Connection Persistence](#connection-persistence)
+- [Examples by Use Case](#examples-by-use-case)
+
 ## Connection Overview
 
 TM1py connects to TM1 servers via the TM1 REST API. All connections are established through the `TM1Service` class, which manages authentication, session handling, and HTTP communication.

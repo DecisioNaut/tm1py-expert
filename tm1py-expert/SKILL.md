@@ -2,26 +2,12 @@
 name: tm1py-expert
 description: Expert guidance for TM1py Python package for IBM Planning Analytics (TM1). Master connection management, data operations (MDX, views, DataFrames), metadata CRUD, performance optimization, and best practices. Use when working with TM1py, IBM Planning Analytics API, or when user mentions TM1, Planning Analytics, TM1 REST API, MDX queries, cube operations, dimension management, or Python TM1 development.
 license: MIT
-metadata:
-  version: "1.0.0"
-  author: tm1py-expert contributors
 compatibility: Requires Python 3.7+, TM1py package, TM1/Planning Analytics v11+
 ---
 
 # TM1py Expert
 
 This skill provides expert guidance for working with TM1py, the Python package that wraps the IBM Planning Analytics (TM1) REST API. TM1py enables programmatic interaction with TM1 servers for data operations, metadata management, and automation.
-
-## When to Use This Skill
-
-Activate this skill when:
-- **Connecting to TM1/Planning Analytics** servers from Python
-- **Reading or writing data** from TM1 cubes (via MDX, views, or DataFrames)
-- **Managing TM1 metadata** (dimensions, cubes, processes, chores, subsets)
-- **Optimizing performance** with async operations or bulk data transfers
-- **Troubleshooting TM1py** connection or operation issues
-- **Designing TM1 automation** workflows
-- User mentions: TM1py, IBM Planning Analytics, TM1 REST API, MDX queries, cube operations, dimension management, TI processes, Planning Analytics Workspace, tm1 automation
 
 ## Prerequisites
 
@@ -125,7 +111,7 @@ with TM1Service(**params) as tm1:
     print("Connected to PAaaS")
 ```
 
-See `references/CONNECTION_GUIDE.md` for all connection patterns including TM1 12 on-premise and Cloud Pak for Data.
+See [CONNECTION_GUIDE.md](references/CONNECTION_GUIDE.md) for all connection patterns including TM1 12 on-premise and Cloud Pak for Data.
 
 ### Task 2: Read Data from Cubes
 
@@ -173,7 +159,7 @@ df = tm1.cells.execute_view_dataframe(
 )
 ```
 
-See `references/DATA_OPERATIONS.md` for advanced reading patterns.
+See [DATA_OPERATIONS.md](references/DATA_OPERATIONS.md#performance-options-for-reading) for advanced reading patterns including blob operations and performance optimizations.
 
 ### Task 3: Write Data to Cubes
 
@@ -239,7 +225,7 @@ tm1.cells.write_async(
 )
 ```
 
-See `references/PERFORMANCE.md` for optimization strategies.
+See [PERFORMANCE.md](references/PERFORMANCE.md#writing-data-performance) for optimization strategies including async operations and bulk transfer techniques.
 
 ### Task 4: Manage Dimensions and Hierarchies
 
@@ -296,7 +282,7 @@ tm1.elements.add_edge(
 )
 ```
 
-See `references/METADATA_MANAGEMENT.md` for CRUD operations and `references/METADATA_MANAGEMENT_ADVANCED.md` for advanced patterns.
+See [METADATA_MANAGEMENT.md](references/METADATA_MANAGEMENT.md) for comprehensive CRUD operations and [METADATA_MANAGEMENT_ADVANCED.md](references/METADATA_MANAGEMENT_ADVANCED.md) for advanced patterns.
 
 ### Task 5: Execute TI Processes
 
@@ -403,7 +389,7 @@ except Exception as e:
     print(f"Error executing process: {str(e)}")
 ```
 
-See `references/EXAMPLES.md` for more complex automation patterns and use cases.
+See [EXAMPLES.md](references/EXAMPLES.md) for real-world patterns including dimension sync, data loading, reporting automation, and multi-environment workflows.
 
 ## Troubleshooting
 
@@ -445,15 +431,15 @@ See `references/EXAMPLES.md` for more complex automation patterns and use cases.
 
 ## Reference Files
 
-For detailed information, consult these reference documents:
+For detailed information, consult these reference documents in [references/](references/):
 
-- **API_REFERENCE.md**: Complete service-by-service API documentation with all methods and parameters
-- **CONNECTION_GUIDE.md**: Connection patterns for all TM1 environments (on-prem, cloud, TM1 12)
-- **DATA_OPERATIONS.md**: Deep dive into reading and writing data with all options and optimizations
-- **METADATA_MANAGEMENT.md**: Comprehensive guide to CRUD operations for all TM1 objects
-- **METADATA_MANAGEMENT_ADVANCED.md**: Advanced metadata patterns and reusable workflows
-- **PERFORMANCE.md**: Performance optimization techniques, async operations, and benchmarking
-- **EXAMPLES.md**: Extended code samples and real-world use cases
+- [API_REFERENCE.md](references/API_REFERENCE.md): Complete service-by-service API documentation with all methods and parameters
+- [CONNECTION_GUIDE.md](references/CONNECTION_GUIDE.md): Connection patterns for all TM1 environments (on-prem, cloud, TM1 12)
+- [DATA_OPERATIONS.md](references/DATA_OPERATIONS.md): Reading and writing data with options, optimizations, and validation patterns
+- [METADATA_MANAGEMENT.md](references/METADATA_MANAGEMENT.md): Comprehensive CRUD operations for dimensions, hierarchies, cubes, processes, views, and more
+- [METADATA_MANAGEMENT_ADVANCED.md](references/METADATA_MANAGEMENT_ADVANCED.md): Advanced workflows for cube cloning, complete dimension setup, and complex patterns
+- [PERFORMANCE.md](references/PERFORMANCE.md): Optimization for reads/writes, connection resilience, MDX queries, and benchmarking
+- [EXAMPLES.md](references/EXAMPLES.md): Real-world patterns including dimension sync, data loading, reporting, multi-environment sync, and error handling
 
 ## Additional Resources
 

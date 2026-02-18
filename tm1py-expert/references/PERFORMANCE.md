@@ -2,6 +2,20 @@
 
 Guide to optimizing TM1py operations for speed and efficiency.
 
+## Contents
+- [Performance Priorities](#performance-priorities)
+- [Reading Data Performance](#reading-data-performance)
+- [Writing Data Performance](#writing-data-performance)
+- [Connection Resilience](#connection-resilience-tm1py-21)
+- [Metadata Operations](#metadata-operations)
+- [MDX Query Optimization](#mdx-query-optimization)
+- [Connection Optimization](#connection-optimization)
+- [Process Execution](#process-execution)
+- [Memory Optimization](#memory-optimization)
+- [Benchmarking](#benchmarking)
+- [Performance Checklist](#performance-checklist)
+- [Common Performance Issues](#common-performance-issues)
+
 ## Performance Priorities
 
 1. **Use blob operations** when available (requires ADMIN rights)

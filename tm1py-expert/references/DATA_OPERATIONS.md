@@ -2,6 +2,28 @@
 
 Comprehensive guide to reading and writing data in TM1 using TM1py.
 
+## Contents
+- [Reading Data](#reading-data)
+  - [1. Execute MDX Queries](#1-execute-mdx-queries)
+  - [2. Execute Views](#2-execute-views)
+  - [3. Get Individual Cell Values](#3-get-individual-cell-values)
+  - [4. Performance Options for Reading](#4-performance-options-for-reading)
+  - [5. Query Cell Count Before Execution](#5-query-cell-count-before-execution)
+  - [6. Read with Dimensions and Attributes](#6-read-with-dimensions-and-attributes)
+- [Writing Data](#writing-data)
+  - [1. Write Single Cell Value](#1-write-single-cell-value)
+  - [2. Write Multiple Cells](#2-write-multiple-cells-cellset)
+  - [3. Write DataFrame](#3-write-dataframe)
+  - [4. Async/Parallel Writes](#4-asyncparallel-writes)
+  - [5. Write from View/MDX Results](#5-write-from-viewmdx-results)
+  - [6. Incremental Writes](#6-incremental-writes)
+  - [7. Write with Transaction Log Control](#7-write-with-transaction-log-control)
+- [Clearing Data](#clearing-data)
+- [Data Validation](#data-validation)
+- [Data Transformations](#data-transformations)
+- [Advanced Patterns](#advanced-patterns)
+- [Error Handling](#error-handling)
+
 ---
 
 ## Reading Data

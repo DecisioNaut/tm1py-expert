@@ -2,6 +2,18 @@
 
 Real-world examples and patterns for common TM1py tasks.
 
+## Contents
+- [1. Dimension Management from External Data](#1-dimension-management-from-external-data)
+- [2. Data Loading Patterns](#2-data-loading-patterns)
+- [3. Automated Reporting](#3-automated-reporting)
+- [4. Multi-Environment Data Sync](#4-multi-environment-data-sync)
+- [5. Error Handling Patterns](#5-error-handling-patterns)
+- [6. Automation Workflows](#6-automation-workflows)
+- [7. Advanced Dimension Maintenance](#7-advanced-dimension-maintenance)
+- [8. Sandbox Operations](#8-sandbox-operations)
+- [9. Security Management](#9-security-management)
+- [10. Monitoring and Logging](#10-monitoring-and-logging)
+
 ---
 
 ## 1. Dimension Management from External Data
